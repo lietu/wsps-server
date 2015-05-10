@@ -79,18 +79,17 @@ var wsps = WSPS.create({
     }
 });
 
-wsps.connect();
-
 var receive = function(packet) {
     console.log(packet.data.msg);
 };
 
+wsps.subscribe("some-channel", receive, subscribeKey);
+wsps.connect();
+
 var send = function() {
-    wsps.send("some-channel", {msg: "Hello, WSPS!"}, writeKey);
+    wsps.publish("some-channel", {msg: "Hello, WSPS!"}, writeKey);
 };
 
-wsps.listen("some-channel", receive, subscribeKey);
- 
 setTimeout(send, 2500);
 ```
 
