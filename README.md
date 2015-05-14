@@ -2,7 +2,10 @@
 
 WSPS stands for WebSocket Pub(lisher)-Sub(scriber), and that pretty much covers what it does. The WSPS server provides a WebSocket interface for clients to subscribe to messages on different "channels", and then publishing messages on those channels.
 
-There is a client made for JavaScript (both browser and Node.js use), [wsps-javascript](https://github.com/lietu/wsps-javascript)
+There is a client made for:
+
+ * JavaScript (both browser and Node.js use): [wsps-javascript](https://github.com/lietu/wsps-javascript)
+ * Python: [wsps-python](https://github.com/lietu/wsps-python)
 
 Authorization to subscribe/publish to channels is easily extensible, so if you
 want to e.g. use token based authentication, you can easily write your own 
